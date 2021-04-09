@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      window.onload = function () {
+        var dataPoints = [];
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+          animationEnabled: true,
+          theme: "light2",
+          title: {
+            text: "India Stats",
+          },
+          axisX: {
+            title: "States",
+          },
+          axisY: {
+            title: "Cases",
+            titleFontSize: 24,
+          },
+
+          data: [
+            {
+              type: "column",
+              yValueFormatString: "#,### Cases",
+              dataPoints: dataPoints,
+            },
+          ],
+        });
+
+        function addData(data) {
+          for (var i = 0; i < 15; i++) {
+            dataPoints.push({
+              label: data.data.statewise[i].state,
+              y: data.data.statewise[i].confirmed,
+            });
+          }
+          chart.render();
+        }
+
+        const fetchAsync = async () => {
+          try {
+            const action = await fetch(
+              "https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise"
+            );
+            const dataAction = await action.json();
+            addData(dataAction);
+          } catch (e) {
+            console.log(e);
+          }
+        };
+        fetchAsync();
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div
+            id="chartContainer"
+            style="margin-top: 20px; height: 500px; width: 100%"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      window.onload = function () {
+        var dataPoints = [];
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+          animationEnabled: true,
+          theme: "light2",
+          title: {
+            text: "Beds in India",
+          },
+          axisX: {
+            title: "States",
+          },
+          axisY: {
+            title: "Beds",
+            titleFontSize: 24,
+          },
+
+          data: [
+            {
+              type: "column",
+              yValueFormatString: "#,### Beds",
+              dataPoints: dataPoints,
+            },
+          ],
+        });
+
+        function addData(data) {
+          for (var i = 0; i < 35; i++) {
+            dataPoints.push({
+              label: data.data.regional[i].state,
+              y: data.data.regional[i].totalBeds,
+            });
+          }
+          chart.render();
+        }
+
+        fetch("https://api.rootnet.in/covid19-in/hospitals/beds")
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            addData(data);
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div
+            id="chartContainer"
+            style="margin-top: 20px; height: 500px; width: 100%"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </body>
+</html>
