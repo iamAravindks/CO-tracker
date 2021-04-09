@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Girassol&family=PT+Mono&family=PT+Sans+Narrow&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>CO-tracker</title>
+    <style></style>
+  </head>
+
+  <body class="bg-one-dark one-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2 fixed-top">
+      <a class="navbar-brand" href="#">CO-tracker</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pages/world.html">World Stats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pages/india.html">India Stats</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./pages/testing.html"
+              >Testing Stats(India)</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pages/hospital.html"
+              >Hospitals and Beds(India)</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pages/contact.html">Contacts</a>
+          </li>
+  
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-12 mt-3 py-1 mb-2" style="text-align: center">
+                <h1 style="font-family: 'Girassol', cursive">
+                  COVID-19 Tracker
+                </h1>
+              </div>
+            </div>
+
+            <div class="row">
+            <div class="col-md-12">
+              <div
+                class="embed-responsive embed-responsive-16by9"
+                style="height: 600px"
+              >
+                <iframe
+                  class="embed-responsive-item"
+                  src="pages/graphs/indiaStats.html"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <div
+                class="card bg-one-dark one-light text-center border border-light mt-10"
+                id="indiahome"
+              ></div>
+            </div>
+
+            <div class="col-sm-6">
+              <div
+                class="card bg-one-dark one-light text-center border border-light mt-10"
+                id="worldhome"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 my-5">
+        <ul class="list-group">
+          <li class="list-group-item active" aria-disabled="true">Resources</li>
+
+          <li class="list-group-item">
+            <a href="https://www.youtube.com/watch?v=W3xwpkZvfvQ" target="blank"
+              >COVID-19 with Science & Technology</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a href="https://www.youtube.com/watch?v=XeD75KlEfXU" target="blank"
+              >All About Aarogya Setu App</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_US"
+              target="blank"
+              >Download Aarogya Setu App</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a href="https://www.youtube.com/watch?v=u4-geG9b7Yw" target="blank"
+              >Know - what is "hotspot"?</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://epaper.hindustantimes.com/Home/ArticleView"
+              target="blank"
+              >Read Today's E-Newspaper</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a href="https://www.youtube.com/watch?v=yvEfOjAx9Sg" target="blank"
+              >Make Face Mask at Home</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+   <div class="row bg-dark mt-5 " >
+      <div class="col-md-12 text-center">
+        <p class="my-2" style="font-style: monospace">
+          Sourced from The Ministry of Health and Family Welfare
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

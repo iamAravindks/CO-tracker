@@ -1,0 +1,26 @@
+.card {
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in !important;
+}
+
+.bg-one-dark {
+  background-color: rgb(28, 28, 30) !important;
+}
+.one-light {
+  color: rgb(242, 242, 247) !important;
+}
+.bg-one-light {
+  background-color: rgb(242, 242, 247) !important;
+}
+.one-dark {
+  color: rgb(28, 28, 30) !important;
+}
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
